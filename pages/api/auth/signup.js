@@ -1,9 +1,9 @@
-import connectMongo from "../../../utils/connectMongo";
+
 
 export default async function hendler(req, res) {
   const { method } = req;
 
-  connectMongo();
+
 
   if (method === "POST") {
     try {
