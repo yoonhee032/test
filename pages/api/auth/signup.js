@@ -1,5 +1,5 @@
-import connectMongo from "../../../util/connectMongo";
-import User from "../../../model/schemas/user";
+import connectMongo from "../../../utils/connectMongo";
+import User from "../../../models/schemas/user";
 import Folder from "../../../models/schemas/folder";
 
 import crypto from "crypto";
