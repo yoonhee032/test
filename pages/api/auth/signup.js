@@ -1,9 +1,9 @@
-
+import dbConnect from "../../../util/connectMongo";
 
 export default async function hendler(req, res) {
   const { method } = req;
 
-
+  dbConnect();
 
   if (method === "POST") {
     try {
