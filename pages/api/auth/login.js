@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-import connectMongo from "../../../util/connectMongo";
+import connectMongo from "../../../utils/connectMongo";
 import User from "../../../models/schemas/user";
 
 import crypto from "crypto";
