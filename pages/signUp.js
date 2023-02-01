@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-import ColorLogo from "../public/svg/logo_color.svg";
 import tw from "tailwind-styled-components";
 
 const Logodiv = tw.div`
@@ -85,7 +84,7 @@ export default function SignUp() {
     }
 
     //실질적인 axios요청,
-    return await axios.post("api/auth/signup", signUpData);
+    return await axios.post(`api/auth/signup`, signUpData);
   };
 
   return (
@@ -93,11 +92,6 @@ export default function SignUp() {
       <section className="h-screen text-gray-600 body-font">
         <div className="h-screen mx-auto flex items-center justify-center flex-col">
           <div className="items-center y-100 rounded-lg p-8 flex flex-col w-full mt-10 md:mt-0">
-            <Logodiv>
-              <Link href="/login">
-                <ColorLogo className="max-w-[300px] w-[90%] m-auto h-[54px] sm:w-[300px]" />
-              </Link>
-            </Logodiv>
             <form className="max-w-[400px] w-full">
               <InputDiv>
                 <label
@@ -172,22 +166,10 @@ export default function SignUp() {
                 type="button"
                 className="text-white bg-[#0074FF] border-0 py-2 px-8 rounded text-lg h-[60px] w-full mt-8"
                 onClick={() => {
+                  console.log(signUpData);
                   clickSignUpBtn()
                     .then((res) => {
-                      if (res.data.status === true) {
-                        alert(res.data.message);
-                        router.push("/");
-                      } else {
-                        //에러 메시지를 보여주고
-                        setErrorMsg(res.data.message);
-                        //input의 모든 데이터를 없앰
-                        setSignUpData({
-                          email: "",
-                          password: "",
-                          confirmPassword: "",
-                          name: "",
-                        });
-                      }
+                      alert(res.data.message);
                     })
                     .catch((e) => {
                       // console.log(e);
