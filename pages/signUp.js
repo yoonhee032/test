@@ -84,10 +84,7 @@ export default function SignUp() {
     }
 
     //실질적인 axios요청,
-    return await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/auth/signup`,
-      signUpData
-    );
+    return await axios.post(`api/auth/signup`, signUpData);
   };
 
   return (
