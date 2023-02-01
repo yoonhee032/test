@@ -38,7 +38,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <section className="bg-[#0074FF] h-screen mx-auto flex items-center justify-center relative">
+      <section className="bg-[#0074FF] h-screen mx-auto flex items-center justify-center relative">
         <div className="max-w-[1200px] w-[90%] flex px-5 py-24 items-center justify-center flex-col">
           <div className="mb-10">
             <Logo className="w-[300px] sm:w-[400px] md:w-[500px]" />
@@ -67,6 +67,9 @@ export default function Home() {
       </section>
       <section>
         <div className="max-w-[1200px] w-[90%] py-20 lg:py-[150px] m-auto">
+          {/* <div>
+            <video src="/videos/test.mp4" loop autoPlay muted className="w-[800px] h-[500px] "/>
+          </div> */}
           <div className="flex justify-center sm:justify-between items-end relative gap-0 sm:gap-10">
             <video
               src="/videos/main_pc_test.mp4"
@@ -141,7 +144,7 @@ export default function Home() {
             </UsageBox>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }

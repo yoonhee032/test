@@ -66,7 +66,7 @@ export default function Login() {
 
   return (
     <>
-      {/* <section className="text-gray-600 body-font h-screen">
+      <section className="text-gray-600 body-font h-screen">
         <div className="mx-auto flex px-5 items-center justify-center flex-col h-screen">
           <div className="y-100 rounded-lg p-8 flex flex-col w-full mt-10 md:mt-0 items-center">
             <Logodiv>
@@ -137,7 +137,7 @@ export default function Login() {
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
