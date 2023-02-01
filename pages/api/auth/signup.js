@@ -3,6 +3,11 @@ export default function signup(req, res) {
   const date = new Date();
   const format = date.toGMTString();
 
+  if (req.method === "POST") {
+    console.log("포스트")
+  }
+
+
   res.json({
     status: true,
     now: format,
