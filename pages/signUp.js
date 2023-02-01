@@ -93,11 +93,11 @@ export default function SignUp() {
       <section className="h-screen text-gray-600 body-font">
         <div className="h-screen mx-auto flex items-center justify-center flex-col">
           <div className="items-center y-100 rounded-lg p-8 flex flex-col w-full mt-10 md:mt-0">
-            {/* <Logodiv>
+            <Logodiv>
               <Link href="/login">
                 <ColorLogo className="max-w-[300px] w-[90%] m-auto h-[54px] sm:w-[300px]" />
               </Link>
-            </Logodiv> */}
+            </Logodiv>
             <form className="max-w-[400px] w-full">
               <InputDiv>
                 <label
