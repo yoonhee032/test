@@ -1,13 +1,11 @@
-import connectMongo from "../../../utils/connectMongo";
-import User from "../../../models/schemas/user";
-import Folder from "../../../models/schemas/folder";
+export default function now(req, res) {
+  console.log("요청이 들어왔습니다. ", req);
+  const date = new Date();
+  const format = date.toGMTString();
 
-import crypto from "crypto";
-
-export default async function signup(req, res) {
-  console.log("요청이 들어왔습니다. ", req.body);
+  res.json({
+    status: true,
+    now: format,
+    message: "회원가입을 완료했습니다.",
+  });
 }
-
-const passwordHash = (password) => {
-  return crypto.createHash("sha1").update(password).digest("hex");
-};
