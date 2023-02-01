@@ -7,7 +7,7 @@ export default async function hendler(req, res) {
 
   if (method === "POST") {
     try {
-      console.log("포스트");
+      console.log("포스트 중");
 
       res.json({
         status: true,
