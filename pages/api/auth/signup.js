@@ -4,13 +4,12 @@ export default function signup(req, res) {
   const format = date.toGMTString();
 
   if (req.method === "POST") {
-    console.log("포스트")
+    console.log("포스트");
+
+    res.json({
+      status: true,
+      now: format,
+      message: "회원가입을 했습니다.",
+    });
   }
-
-
-  res.json({
-    status: true,
-    now: format,
-    message: "회원가입을 완료했습니다.",
-  });
 }

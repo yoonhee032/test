@@ -1,11 +1,12 @@
 export default function now(req, res) {
-  console.log("요청이 들어왔습니다. ", req);
   const date = new Date();
   const format = date.toGMTString();
 
+  res.json({ req : req });
+
   res.json({
-    status: true, 
+    status: true,
     now: format,
-    message: "회원가입을 완료했습니다." 
+    message: "회원가입을 완료했습니다.",
   });
 }
